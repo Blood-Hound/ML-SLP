@@ -127,8 +127,6 @@ for epoch in range(300):
     all_acc_validate.append(avg_acc_validate/5*100)
     all_err_validate.append(avg_err_validate/5)
 
-#for i in all_acc_train:
-#    print(i)
 plot(all_err_train, all_err_validate, all_acc_train, all_acc_validate)
 
 
