@@ -75,19 +75,19 @@ def train_data(datas):
         update_theta_bias()
     return(predict_true/80,err/80)
 
-def plot(error_training, error_test, accuracy_training, accuracy_test): 
-    global alpha 
+def plot(err_train, err_validate, acc_train, acc_validate):
+    global alpha
     plt.figure(1)
-    plt.plot(error_training, color='blue', linewidth=2, label = 'training')
-    plt.plot(error_test, color='red', linewidth=2, label = 'test')
+    plt.plot(err_train, color='blue', linewidth=2, label = 'training')
+    plt.plot(err_validate, color='red', linewidth=2, label = 'test')
     plt.title('Sum Error: Learning Rate ' + str(alpha))
     plt.xlabel('Epoch')
     plt.ylabel('Error')
     plt.legend()
     
     plt.figure(2)
-    plt.plot(accuracy_training, color='blue', linewidth=2, label = 'training')
-    plt.plot(accuracy_test, color='red', linewidth=2, label = 'test')
+    plt.plot(acc_train, color='blue', linewidth=2, label = 'training')
+    plt.plot(acc_validate, color='red', linewidth=2, label = 'test')
     plt.title('Accuracy: Learning Rate ' + str(alpha))
     plt.xlabel('Epoch')
     plt.ylabel('Accuracy(%)')
